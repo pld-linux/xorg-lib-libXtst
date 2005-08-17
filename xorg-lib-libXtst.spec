@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-proto-recordproto-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/libXtst-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -35,6 +36,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXtst = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-recordproto-devel
+Obsoletes:	libXtst-devel
 
 %description devel
 X extension library.
@@ -54,6 +56,7 @@ Summary:	Static libXtst libraries
 Summary(pl):	Biblioteki statyczne libXtst
 Group:		Development/Libraries
 Requires:	xorg-lib-libXtst-devel = %{version}-%{release}
+Obsoletes:	libXtst-static
 
 %description static
 X extension library.
