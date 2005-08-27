@@ -18,8 +18,6 @@ BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-
 %description
 X tst extension library.
 
