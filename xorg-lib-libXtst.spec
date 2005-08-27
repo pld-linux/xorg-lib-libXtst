@@ -1,5 +1,3 @@
-
-#
 Summary:	X tst library
 Summary(pl):	Biblioteka X tst
 Name:		xorg-lib-libXtst
@@ -12,28 +10,27 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXtst-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-recordproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXtst
-BuildRoot:	%{tmpdir}/libXtst-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
 %description
-X extension library.
+X tst extension library.
 
 %description -l pl
-Biblioteka rozszerzeñ X.
-
+Biblioteka rozszerzenia X tst.
 
 %package devel
 Summary:	Header files libXtst development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXtst
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXtst = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-recordproto-devel
 Obsoletes:	libXtst-devel
@@ -50,12 +47,11 @@ Biblioteka rozszerzeñ X.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXtst.
 
-
 %package static
-Summary:	Static libXtst libraries
-Summary(pl):	Biblioteki statyczne libXtst
-Group:		Development/Libraries
-Requires:	xorg-lib-libXtst-devel = %{version}-%{release}
+Summary:	Static libXtst library
+Summary(pl):	Biblioteka statyczna libXtst
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXtst-static
 
 %description static
@@ -68,10 +64,8 @@ Biblioteka rozszerzeñ X.
 
 Pakiet zawiera statyczn± bibliotekê libXtst.
 
-
 %prep
 %setup -q -n libXtst-%{version}
-
 
 %build
 %{__libtoolize}
@@ -95,19 +89,16 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXtst.so.*
-
+%attr(755,root,root) %{_libdir}/libXtst.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libXtst.so
 %{_libdir}/libXtst.la
-%attr(755,root,wheel) %{_libdir}/libXtst.so
 %{_pkgconfigdir}/xtst.pc
-
 
 %files static
 %defattr(644,root,root,755)
