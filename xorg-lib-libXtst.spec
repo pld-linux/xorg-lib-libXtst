@@ -1,12 +1,12 @@
 Summary:	X tst library
 Summary(pl):	Biblioteka X tst
 Name:		xorg-lib-libXtst
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXtst-%{version}.tar.bz2
-# Source0-md5:	0f73b1557c59d8aa1d239b59cae93765
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXtst-%{version}.tar.bz2
+# Source0-md5:	ab5f71b31338fa133d9b701bf73bc4ad
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
