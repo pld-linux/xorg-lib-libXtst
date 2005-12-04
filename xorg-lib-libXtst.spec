@@ -25,8 +25,8 @@ X tst extension library.
 Biblioteka rozszerzenia X tst.
 
 %package devel
-Summary:	Header files libXtst development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXtst
+Summary:	Header files for libXtst library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,7 +37,7 @@ Obsoletes:	libXtst-devel
 X extension library.
 
 This package contains the header files needed to develop programs that
-use these libXtst.
+use libXtst.
 
 %description devel -l pl
 Biblioteka rozszerzeñ X.
