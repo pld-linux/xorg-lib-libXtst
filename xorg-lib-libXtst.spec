@@ -1,5 +1,5 @@
 Summary:	X tst library
-Summary(pl):	Biblioteka X tst
+Summary(pl.UTF-8):   Biblioteka X tst
 Name:		xorg-lib-libXtst
 Version:	1.0.1
 Release:	3
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X tst extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia X tst.
 
 %package devel
 Summary:	Header files for libXtst library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXtst
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -39,15 +39,15 @@ X extension library.
 This package contains the header files needed to develop programs that
 use libXtst.
 
-%description devel -l pl
-Biblioteka rozszerzeñ X.
+%description devel -l pl.UTF-8
+Biblioteka rozszerzeÅ„ X.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXtst.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXtst.
 
 %package static
 Summary:	Static libXtst library
-Summary(pl):	Biblioteka statyczna libXtst
+Summary(pl.UTF-8):   Biblioteka statyczna libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXtst-static
@@ -57,10 +57,10 @@ X extension library.
 
 This package contains the static libXtst library.
 
-%description static -l pl
-Biblioteka rozszerzeñ X.
+%description static -l pl.UTF-8
+Biblioteka rozszerzeÅ„ X.
 
-Pakiet zawiera statyczn± bibliotekê libXtst.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXtst.
 
 %prep
 %setup -q -n libXtst-%{version}
