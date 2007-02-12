@@ -1,5 +1,5 @@
 Summary:	X tst library
-Summary(pl.UTF-8):   Biblioteka X tst
+Summary(pl.UTF-8):	Biblioteka X tst
 Name:		xorg-lib-libXtst
 Version:	1.0.1
 Release:	3
@@ -26,7 +26,7 @@ Biblioteka rozszerzenia X tst.
 
 %package devel
 Summary:	Header files for libXtst library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXtst
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -47,7 +47,7 @@ używających biblioteki libXtst.
 
 %package static
 Summary:	Static libXtst library
-Summary(pl.UTF-8):   Biblioteka statyczna libXtst
+Summary(pl.UTF-8):	Biblioteka statyczna libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXtst-static
