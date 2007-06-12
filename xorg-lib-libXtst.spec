@@ -1,5 +1,5 @@
-Summary:	X tst library
-Summary(pl.UTF-8):	Biblioteka X tst
+Summary:	Xtst library
+Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
 Version:	1.0.2
 Release:	1
@@ -19,10 +19,10 @@ Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X tst extension library.
+Xtst library - RECORD and XTEST extensions.
 
 %description -l pl.UTF-8
-Biblioteka rozszerzenia X tst.
+Biblioteka Xtst - rozszerzenia RECORD i XTEST.
 
 %package devel
 Summary:	Header files for libXtst library
@@ -34,13 +34,13 @@ Requires:	xorg-proto-recordproto-devel
 Obsoletes:	libXtst-devel
 
 %description devel
-X extension library.
+RECORD and XTEST extension library.
 
 This package contains the header files needed to develop programs that
 use libXtst.
 
 %description devel -l pl.UTF-8
-Biblioteka rozszerzeń X.
+Biblioteka rozszerzeń RECORD i XTEST.
 
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libXtst.
@@ -53,12 +53,12 @@ Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXtst-static
 
 %description static
-X extension library.
+RECORD and XTEST extension library.
 
 This package contains the static libXtst library.
 
 %description static -l pl.UTF-8
-Biblioteka rozszerzeń X.
+Biblioteka rozszerzeń RECORD i XTEST.
 
 Pakiet zawiera statyczną bibliotekę libXtst.
 
