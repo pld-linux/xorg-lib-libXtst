@@ -1,12 +1,12 @@
 Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
-Version:	1.0.3
-Release:	2
+Version:	1.0.99.1
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.bz2
-# Source0-md5:	090c1ad04e34982eada5cf3b1a0792fd
+# Source0-md5:	c41044b5c3af20e7abcfb874ea743b52
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -91,10 +91,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXtst.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXtst.so.6
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXtst.so
+%{_includedir}/X11/extensions/*.h
 %{_libdir}/libXtst.la
 %{_pkgconfigdir}/xtst.pc
 %{_mandir}/man3/*
