@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-recordproto-devel
 BuildRequires:	xorg-util-util-macros
+BuildRequires:	xmlto
 Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
