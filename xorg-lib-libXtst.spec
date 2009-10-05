@@ -13,10 +13,11 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xmlto
-BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXext-devel >= 1:1.0.99.4
 BuildRequires:	xorg-lib-libXi-devel
-BuildRequires:	xorg-proto-recordproto-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-proto-recordproto-devel >= 1.13.99.1
+BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.3
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,8 +32,9 @@ Summary:	Header files for libXtst library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-recordproto-devel
+Requires:	xorg-lib-libXext-devel >= 1:1.0.99.4
+BuildRequires:	xorg-lib-libXi-devel
+Requires:	xorg-proto-recordproto-devel >= 1.13.99.1
 Obsoletes:	libXtst-devel
 
 %description devel
@@ -91,17 +93,18 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXtst.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXtst.so.6
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXtst.so
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/XTest.h
+%{_includedir}/X11/extensions/record.h
 %{_libdir}/libXtst.la
 %{_pkgconfigdir}/xtst.pc
-%{_mandir}/man3/*
+%{_mandir}/man3/XTest*.3x*
 
 %files static
 %defattr(644,root,root,755)
