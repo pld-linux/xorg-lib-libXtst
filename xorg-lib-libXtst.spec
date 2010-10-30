@@ -1,23 +1,24 @@
 Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
-Version:	1.1.0
-Release:	2
+Version:	1.2.0
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.bz2
-# Source0-md5:	dd6f3e20b87310187121539f9605d977
+# Source0-md5:	7c592c72da6676f8b0aeec9133b81686
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xmlto
+BuildRequires:	xmlto >= 0.0.20
 BuildRequires:	xorg-lib-libXext-devel >= 1:1.0.99.4
 BuildRequires:	xorg-lib-libXi-devel
 BuildRequires:	xorg-proto-recordproto-devel >= 1.13.99.1
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.3
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-util-util-macros >= 1.10
 Obsoletes:	libXtst
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -99,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc specs/*.{html,css}
 %attr(755,root,root) %{_libdir}/libXtst.so
 %{_includedir}/X11/extensions/XTest.h
 %{_includedir}/X11/extensions/record.h
