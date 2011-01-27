@@ -2,7 +2,7 @@ Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.bz2
@@ -10,6 +10,7 @@ Source0:	http://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.t
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xmlto >= 0.0.20
@@ -34,7 +35,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel >= 1:1.0.99.4
-BuildRequires:	xorg-lib-libXi-devel
+Requires:	xorg-lib-libXi-devel
 Requires:	xorg-proto-recordproto-devel >= 1.13.99.1
 Obsoletes:	libXtst-devel
 
