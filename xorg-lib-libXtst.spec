@@ -78,7 +78,8 @@ Pakiet zawiera statyczną bibliotekę libXtst.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--without-fop
 %{__make}
 
 %install
