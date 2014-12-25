@@ -109,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/record.h
 %{_libdir}/libXtst.la
 %{_pkgconfigdir}/xtst.pc
-%{_mandir}/man3/XTest*.3x*
+%{_mandir}/man3/XTest*.3*
 
 %files static
 %defattr(644,root,root,755)
