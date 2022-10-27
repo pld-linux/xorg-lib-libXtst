@@ -1,18 +1,19 @@
 Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
-Version:	1.2.3
+Version:	1.2.4
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.bz2
-# Source0-md5:	ef8c2c1d16a00bd95b9fdcef63b8a2ca
+Source0:	https://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.xz
+# Source0-md5:	02f128fbf809aa9c50d6e54c8e57cb2e
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel >= 1:1.0.99.4
@@ -22,8 +23,9 @@ BuildRequires:	xorg-proto-recordproto-devel >= 1.13.99.1
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.3
 BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.12
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXtst
+Obsoletes:	libXtst < 6.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +43,8 @@ Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel >= 1:1.0.99.4
 Requires:	xorg-lib-libXi-devel
 Requires:	xorg-proto-recordproto-devel >= 1.13.99.1
-Obsoletes:	libXtst-devel
+Requires:	xorg-proto-xextproto-devel >= 7.0.99.3
+Obsoletes:	libXtst-devel < 6.5
 
 %description devel
 RECORD and XTEST extension library.
@@ -60,7 +63,7 @@ Summary:	Static libXtst library
 Summary(pl.UTF-8):	Biblioteka statyczna libXtst
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXtst-static
+Obsoletes:	libXtst-static < 6.5
 
 %description static
 RECORD and XTEST extension library.
@@ -103,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXtst.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXtst.so.6
 
