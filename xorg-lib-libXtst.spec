@@ -1,8 +1,12 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
 Version:	1.2.4
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.xz
@@ -85,6 +89,7 @@ Pakiet zawiera statyczną bibliotekę libXtst.
 %{__autoheader}
 %{__automake}
 %configure \
+	%{!?with_static_libs:--disable-static} \
 	--without-fop
 %{__make}
 
@@ -94,6 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
+
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXtst.la
 
 # packaged as %doc
 %{__rm} $RPM_BUILD_ROOT%{_docdir}/libXtst/{recordlib,xtestlib}.*
@@ -116,10 +124,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXtst.so
 %{_includedir}/X11/extensions/XTest.h
 %{_includedir}/X11/extensions/record.h
-%{_libdir}/libXtst.la
 %{_pkgconfigdir}/xtst.pc
 %{_mandir}/man3/XTest*.3*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libXtst.a
+%endif
