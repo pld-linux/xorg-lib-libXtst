@@ -5,12 +5,12 @@
 Summary:	Xtst library
 Summary(pl.UTF-8):	Biblioteka Xtst
 Name:		xorg-lib-libXtst
-Version:	1.2.5
+Version:	1.2.6
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/archive/individual/lib/libXtst-%{version}.tar.xz
-# Source0-md5:	b62dc44d8e63a67bb10230d54c44dcb7
+# Source0-md5:	2d483d8c441ae4de26329ca4e0cb414f
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
